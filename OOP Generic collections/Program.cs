@@ -67,20 +67,17 @@ namespace OOP_Generic_collections
             if (emp.Count >= 2)
             {
                 Employee firstEmployee = emp.Peek(); // Peek at the first employee
-                Employee secondEmployee = emp.Peek();
+                Employee secondEmployee = emp.Peek(); //peek at the second employee
 
-                // Since Peek doesn't remove the item from the stack, you need to pop it if you want to access the second item.
-
-                if (emp.Count >= 1)
-                {
-                    secondEmployee = emp.Peek(); // Peek at the second employee
-                }
+                
 
                 // Display the information of the first employee
                 if (firstEmployee != null)
                 {
                     Console.WriteLine("First Employee:");
                     firstEmployee.Display();
+                    Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
+
                 }
 
                 // Display the information of the second employee
@@ -88,6 +85,8 @@ namespace OOP_Generic_collections
                 {
                     Console.WriteLine("\nSecond Employee:");
                     secondEmployee.Display();
+                    Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
+
                 }
             }
             else
