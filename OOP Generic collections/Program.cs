@@ -64,8 +64,7 @@ namespace OOP_Generic_collections
             }
 
             // Peek at the first two employees in the stack
-            if (emp.Count >= 2)
-            {
+          
                 Employee firstEmployee = emp.Peek(); // Peek at the first employee
                 Employee secondEmployee = emp.Peek(); //peek at the second employee
 
@@ -88,7 +87,7 @@ namespace OOP_Generic_collections
                     Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
 
                 }
-            }
+            
             else
             {
                 Console.WriteLine("There are not enough employees in the stack to peek at.");
