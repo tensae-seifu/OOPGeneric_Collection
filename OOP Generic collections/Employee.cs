@@ -8,31 +8,31 @@ namespace OOP_Generic_collections
 {
     internal class Employee
     {
+        // Properties to store employee information
         public int _Id { get; set; }
-        public string _Name { get; set;}
+        public string _Name { get; set; }
         public string _Gender { get; set; }
         public decimal _Salary { get; set; }
 
-        public Employee( int Id,string Name, string Gender,decimal Salary) 
-        
-        { 
+        // Constructor to initialize employee properties
+        public Employee(int Id, string Name, string Gender, decimal Salary)
+        {
             this._Id = Id;
             this._Name = Name;
             this._Gender = Gender;
             this._Salary = Salary;
-           
-        
-        
-           
         }
 
-        public void Display() 
+        // Display method to print employee information to the console
+        public void Display()
         {
-            
             Console.WriteLine($"{_Id} - {_Name} - {_Gender} - {_Salary}");
-        
         }
 
-       
+        // An additional Display2 method with a different format
+        public void Display2()
+        {
+            Console.WriteLine($" ID = {_Id}, Name = {_Name}, Gender = {_Gender}, Salary = {_Salary}");
+        }
     }
 }

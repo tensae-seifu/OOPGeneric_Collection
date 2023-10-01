@@ -31,8 +31,8 @@ namespace OOP_Generic_collections
             emp.Push(emp5);
 
             // Display a header
-            Console.WriteLine("Employees are");
-            Console.WriteLine("=============\n\n");
+            Console.WriteLine($"           Employees are");
+            Console.WriteLine($"           =============\n\n");
 
             // Loop through the Employee objects in the stack and display them
             foreach (Employee e in emp)
@@ -42,7 +42,7 @@ namespace OOP_Generic_collections
                 Console.WriteLine();
             }
 
-            Console.WriteLine("===================================================");
+            Console.WriteLine("=========================================");
 
             // Create a copy of the original stack
             Stack<Employee> empCopy = new Stack<Employee>(emp);
@@ -55,7 +55,7 @@ namespace OOP_Generic_collections
                 Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
                 Console.WriteLine();
             }
-            Console.WriteLine("===================================================");
+            Console.WriteLine("=========================================");
 
             // Restore the original stack by pushing the items from the copied stack back
             foreach (Employee e in empCopy)
@@ -95,7 +95,7 @@ namespace OOP_Generic_collections
                 Console.WriteLine("There are not enough employees in the stack to peek at.");
             }
 
-            Console.WriteLine("===================================================");
+            Console.WriteLine("=========================================");
 
             // Check if empCopy contains emp3
             bool contains = empCopy.Contains(emp3);
@@ -109,7 +109,57 @@ namespace OOP_Generic_collections
                 Console.WriteLine($"Emp3 is NOT in the stack");
             }
 
-            Console.ReadLine();
+            // Display a separator for the next section
+            Console.WriteLine("\n\n\n");
+            Console.WriteLine($"           ==============================");
+            Console.WriteLine($"                      Del2 List");
+            Console.WriteLine($"           ==============================\n\n\n");
+
+            // Create a list to store Employee objects
+            List<Employee> list = new List<Employee>();
+
+            // Add Employee objects to the list
+            list.Add(emp1);
+            list.Add(emp2);
+            list.Add(emp3);
+            list.Add(emp4);
+            list.Add(emp5);
+
+            // Check if emp2 exists in the list
+            contains = list.Contains(emp2);
+
+            if (contains)
+            {
+                Console.WriteLine($"Employee 2 object exists in the list");
+            }
+            else
+            {
+                Console.WriteLine($"Employee 2 object DOES NOT exist in the list");
+            }
+
+            Console.WriteLine("\n\n");
+
+            // Find the first male employee in the list
+            Employee maleEmployee = list.Find(employee => employee._Gender == "Male");
+
+            if (maleEmployee != null)
+            {
+                // Display the information of the found male employee
+                maleEmployee.Display2();
+            }
+
+            Console.WriteLine("\n\n");
+
+            // Find all male employees in the list
+            List<Employee> maleEmployees = list.FindAll(employee => employee._Gender == "Male");
+
+            // Iterate through the list of male employees and display their information
+           foreach(Employee employee1 in maleEmployees) 
+            {
+                employee1.Display2();
+            }
+
+            Console.ReadLine(); // Pause execution until the user presses Enter
         }
     }
 }
