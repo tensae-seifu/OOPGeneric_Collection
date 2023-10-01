@@ -33,9 +33,6 @@ namespace OOP_Generic_collections
         
         }
 
-        internal void Peek(Employee emp1)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
