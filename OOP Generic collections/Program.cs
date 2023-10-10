@@ -16,7 +16,7 @@ namespace OOP_Generic_collections
             Employee emp1 = new Employee(101, "Anna", "Female", 35000);
             Employee emp2 = new Employee(102, "Bernard", "Male", 45000);
             Employee emp3 = new Employee(103, "David", "Male", 28000);
-            Employee emp4= new Employee(104,"Sara", "Female", 39000);
+            Employee emp4 = new Employee(104, "Sara", "Female", 39000);
             Employee emp5 = new Employee(105, "Hanna", "Female", 20000);
 
             Stack<Employee> emp = new Stack<Employee>();
@@ -26,20 +26,20 @@ namespace OOP_Generic_collections
             emp.Push(emp3);
             emp.Push(emp4);
             emp.Push(emp5);
-        
-             
+
+
             Console.WriteLine("Employees are");
             Console.WriteLine("=============\n\n");
 
             foreach (Employee e in emp)
             {
-                
+
                 e.Display();
                 Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
                 Console.WriteLine();
             }
 
-            Console.WriteLine("===================================================");
+            Console.WriteLine("=================================\n");
 
             Stack<Employee> empCopy = new Stack<Employee>(emp);
 
@@ -50,23 +50,23 @@ namespace OOP_Generic_collections
                 Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
                 Console.WriteLine();
             }
-            Console.WriteLine("===================================================");
+            Console.WriteLine("================================\n");
 
             foreach (Employee e in empCopy)
 
             {
                 emp.Push(e);
-                
+
 
             }
 
 
-          
 
-           Employee first=emp.Peek();
-           Employee second = emp.Peek();
 
-            if(first!=null && second!=null)
+            Employee first = emp.Peek();
+            Employee second = emp.Peek();
+
+            if (first != null && second != null)
 
             {
                 first.Display();
@@ -81,7 +81,7 @@ namespace OOP_Generic_collections
 
             if (contains)
             {
-               
+
                 Console.WriteLine($"Emp 3 is in the stack\n");
             }
             else
@@ -90,16 +90,16 @@ namespace OOP_Generic_collections
             }
 
 
-            Console.WriteLine("=========Del2=============\n\n");
+            Console.WriteLine("========Del2==================\n\n");
 
             List<Employee> empList = new List<Employee>(emp);
 
-         
 
 
 
-            contains =empList.Contains(emp3); 
-            
+
+            contains = empList.Contains(emp3);
+
             if (contains)
 
             {
@@ -110,24 +110,24 @@ namespace OOP_Generic_collections
 
                 Console.WriteLine("Emp 3 finns inte i stacken\n");
             }
-            Console.WriteLine("===================================");
+            Console.WriteLine("===============================\n");
 
             Employee maleEmplyee = empList.Find(male => male._Gender == "Male");
 
             if (maleEmplyee != null)
-            
-            { 
+
+            {
                 maleEmplyee.Display2();
                 Console.WriteLine("\n");
-            
+
             }
 
             List<Employee> maleEmplyee2 = empList.FindAll(male => male._Gender == "Male");
 
             foreach (Employee e in maleEmplyee2)
 
-            { 
-                
+            {
+
                 e.Display2();
                 Console.WriteLine("\n");
             }
