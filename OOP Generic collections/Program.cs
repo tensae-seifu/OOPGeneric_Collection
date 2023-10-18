@@ -60,22 +60,18 @@ namespace OOP_Generic_collections
 
             }
 
-
-
-
-            Employee first = emp.Peek();
-            Employee second = emp.Peek();
-
-            if (first != null && second != null)
-
+          
+            for (int i = 0; i < 2; i++)
             {
-                first.Display();
-                Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
-                Console.WriteLine();
-                second.Display();
-                Console.WriteLine($"Remaining objects in the stack: {emp.Count}");
-                Console.WriteLine();
+                if (emp.Count > 0)
+                {
+                    Employee employee = emp.Peek();
+                    employee.Display();
+                  
+                }
+               
             }
+
             Console.WriteLine("\n\n");
             bool contains = emp.Contains(emp3);
 
