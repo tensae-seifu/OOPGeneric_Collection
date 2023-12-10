@@ -23,7 +23,6 @@ namespace OOP_Generic_collections
             this._Salary = Salary;
         }
 
-        // Display method to print employee information to the console
         public void Display()
         {
             Console.WriteLine($"{_Id} - {_Name} - {_Gender} - {_Salary}");
